@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National-Star Sports</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>National-Star Sports</h1>
+    <nav>
+      <ul>
+        <li><a href="#football">Football</a></li>
+        <li><a href="#basketball">Basketball</a></li>
+        <li><a href="#soccer">Soccer</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <button id="editToggle">✏️ Edit Site</button>
+  </header>
+
+  <main>
+    <section id="featured">
+      <h2>🏆 Featured Story</h2>
+      <div id="featuredArticles" class="articles"></div>
+    </section>
+
+    <section id="football">
+      <h2>🏈 Football</h2>
+      <div id="footballArticles" class="articles"></div>
+    </section>
+
+    <section id="basketball">
+      <h2>🏀 Basketball</h2>
+      <div id="basketballArticles" class="articles"></div>
+    </section>
+
+    <section id="soccer">
+      <h2>⚽ Soccer</h2>
+      <div id="soccerArticles" class="articles"></div>
+    </section>
+
+    <section id="about">
+      <h2>About National-Star Sports</h2>
+      <p>Your source for up-to-date news, highlights, and insights from across the world of sports.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 National-Star Sports. All rights reserved.</p>
+  </footer>
+
+  <!-- Editor Modal -->
+  <div id="editorModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Add / Edit Article</h3>
+      <label>Category:</label>
+      <select id="category">
+        <option value="featured">Featured</option>
+        <option value="football">Football</option>
+        <option value="basketball">Basketball</option>
+        <option value="soccer">Soccer</option>
+      </select>
+
+      <label>Title:</label>
+      <input type="text" id="title" />
+
+      <label>Content:</label>
+      <textarea id="content"></textarea>
+
+      <label>Image URL (optional):</label>
+      <input type="text" id="image" />
+
+      <div class="buttons">
+        <button id="saveArticle">💾 Save</button>
+        <button id="cancelEdit">❌ Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
