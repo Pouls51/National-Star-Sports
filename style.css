@@ -1,0 +1,166 @@
+:root {
+  --red: #d32f2f;
+  --blue: #0d47a1;
+  --white: #ffffff;
+  --light-gray: #f4f4f4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--light-gray);
+  color: #222;
+}
+
+header {
+  background: linear-gradient(90deg, var(--blue), var(--red));
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#editToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--white);
+  color: var(--blue);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background: var(--white);
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  border-left: 5px solid var(--red);
+  padding-left: 0.5rem;
+  color: var(--blue);
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+article {
+  background: var(--light-gray);
+  padding: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+article img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.article-actions {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.editing .article-actions {
+  display: block;
+}
+
+.article-actions button {
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  margin-left: 4px;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+}
+
+footer {
+  background: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Modal */
+.modal.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+}
+
+.buttons {
+  text-align: right;
+  margin-top: 1rem;
+}
